@@ -24,6 +24,7 @@
 \author{}
 \date{} %To remove date
 \setlength{\parindent}{0pt} %To remove indentation
+\@addtoreset{section}{part} %To reset section counter after each part
 
 \renewcommand{\cfttoctitlefont}{\normalfont\Large}% Remove \bfseries from ToC title
 \renewcommand{\cftsecfont}{}% Remove \bfseries from section titles in ToC
