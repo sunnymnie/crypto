@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import shutil
 import pypandoc
-from datetime import datetime
+from datetime import datetime, timedelta
 import sys
 import time
 
@@ -28,7 +28,7 @@ def parse_figure(fig, name):
         link = fig.find('a')['href']
         img = requests.get(link, stream=True)
         img.raw.decode_content = True
-        with open(name + link[-4:],'wb') as f:
+        with open(name + link[link.rfind('.'):],'wb') as f:
             shutil.copyfileobj(img.raw, f)
 
         return "\includegraphics[width=0.9\linewidth]{"+name+"}"
@@ -36,8 +36,11 @@ def parse_figure(fig, name):
         link = fig.find('div').next['src'].replace('_', '\_', -1)
         return f"Video: {link}"
 
+def html_parse(text):
+    return pypandoc.convert_text("<p>" + text + "</p>", 'latex', format='html')
+
 def parse_header(header, rank):
-    text = pypandoc.convert_text("<p>" + header.text + "</p>", 'latex', format='html')
+    text = html_parse(header.text)
     text = "section*{" + text + "}"
     if rank == "h3": text = "sub" + text
     elif rank != "h2": text = "subsub" + text
@@ -48,6 +51,8 @@ def get_date(html_soup):
     date = date[:date.find('\xa0')]
     if 'hour' in date:
         date = datetime.today().strftime("%b %-d, %Y")
+    elif 'day' in date:
+        date = (datetime.today() - timedelta(days=1)).strftime("%b %-d, %Y")
     return date
     
 
@@ -79,8 +84,8 @@ def main():
     texdoc = []
     fignum = 0
     temp = 'test'
-    title = html_soup.find('div', attrs={'class': 'MuiContainer-root MuiContainer-maxWidthLg'}).find('h1').text
-    author = html_soup.find('p', attrs={'class': 'MuiTypography-root MuiTypography-body1'}).find('a').text
+    title = html_parse(html_soup.find('div', attrs={'class': 'MuiContainer-root MuiContainer-maxWidthLg'}).find('h1').text)
+    author = html_parse(html_soup.find('p', attrs={'class': 'MuiTypography-root MuiTypography-body1'}).find('a').text)
     texdoc.append("\documentclass{messari}\n")
     texdoc.append("\\usepackage{hyperref}\n")
     texdoc.append("\hypersetup{colorlinks=true,linkcolor=black,filecolor=magenta,urlcolor=blue,pdftitle={Overleaf Example},pdfpagemode=FullScreen}\n")
