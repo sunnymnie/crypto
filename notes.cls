@@ -18,6 +18,11 @@
 \RequirePackage{enumitem} %descriptions with good spacing
 \RequirePackage[makeroom]{cancel}
 \RequirePackage[dvipsnames]{xcolor} %Colour for todo
+\RequirePackage{hyperref} %hyperlinks
+
+\hypersetup{colorlinks=true,linkcolor=black,filecolor=magenta,urlcolor=blue,pdftitle={Overleaf Example},pdfpagemode=FullScreen}
+
+\setmainfont{Avenir Next}
 
 %% Additional TeX/LaTeX code...
 
