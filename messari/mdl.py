@@ -79,6 +79,7 @@ def main():
             main = html_soup.find('div', attrs={'class': 'Messari-paywall'}).next()
             break
         except: 
+            print("Waiting for website to load...")
             time.sleep(1)
 
     texdoc = []
