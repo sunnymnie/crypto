@@ -11,6 +11,15 @@ from datetime import datetime, timedelta
 import sys
 import time
 
+def title_class(c):
+    return is_class(c, "MuiContainer-root MuiContainer-maxWidthLg")
+
+def author_class(c):
+    return is_class(c, "MuiTypography-root MuiTypography-body1")
+
+def is_class(c, key):
+    return c is not None and c[:len(key)] == key
+
 
 def parse(text):
     text = text.replace('\n', ' ', -1) + '\n\n'
@@ -21,20 +30,31 @@ def parse_title(title):
     title = title.lower()
     title = title.replace(":", "-", -1)
     title = title.replace(" ", "-", -1)
+    title = title.replace("\n", "", -1)
     return title
 
-def parse_figure(fig, name):
+def parse_figure(fig, img_name):
     try: 
-        link = fig.find('a')['href']
+        if fig.name == "img":
+            link = fig['src']
+        else:
+            link = fig.find('a')['href']
         img = requests.get(link, stream=True)
         img.raw.decode_content = True
-        with open(name + link[link.rfind('.'):],'wb') as f:
+        extension = link[link.rfind('.'):]
+        if extension.find("?") != -1: extension = extension[:extension.find("?")]
+        if extension.find("&") != -1: extension = extension[:extension.find("&")]
+        with open(img_name + extension,'wb') as f:
             shutil.copyfileobj(img.raw, f)
 
-        return "\includegraphics[width=0.9\linewidth]{"+name+"}"
+        return "\includegraphics[width=0.9\linewidth]{"+img_name+"}"
     except:
         link = fig.find('div').next['src'].replace('_', '\_', -1)
         return f"Video: {link}"
+
+# def parse_img(img, name):
+#     print(f"Finding: ---------- {img['src']}")
+#     raise ValueError
 
 def html_parse(text):
     return pypandoc.convert_text("<p>" + text + "</p>", 'latex', format='html')
@@ -47,7 +67,7 @@ def parse_header(header, rank):
     return f"\\{text}"
 
 def get_date(html_soup):
-    date = html_soup.find('p', attrs={'class': 'MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary'}).text
+    date = html_soup.find_all('p', class_=author_class)[1].text
     date = date[:date.find('\xa0')]
     if 'hour' in date:
         date = datetime.today().strftime("%b %-d, %Y")
@@ -81,12 +101,23 @@ def main():
         except: 
             print("Waiting for website to load...")
             time.sleep(1)
-
     texdoc = []
     fignum = 0
     temp = 'test'
-    title = html_parse(html_soup.find('div', attrs={'class': 'MuiContainer-root MuiContainer-maxWidthLg'}).find('h1').text)
-    author = html_parse(html_soup.find('p', attrs={'class': 'MuiTypography-root MuiTypography-body1'}).find('a').text)
+
+
+
+    # print(html_soup.find('div', class_=title_class))
+    # print("="*60)
+
+    title = html_parse(html_soup.find('div', class_=title_class).find('h1').text)
+    # title = html_parse(html_soup.find('div', class_= 'MuiContainer-root MuiContainer-maxWidthLg').find('h1').text)
+    # title = html_parse(html_soup.find('div', attrs={'class': 'MuiContainer-root MuiContainer-maxWidthLg'}).find('h1').text)
+
+    filename = str(parse_title(title))
+    author = html_parse(html_soup.find('p', class_=author_class).find('a').text)
+    # author = html_parse(html_soup.find('p', attrs={'class': 'MuiTypography-root MuiTypography-body1'}).find('a').text)
+    # author = html_parse(html_soup.find('p', class_='MuiTypography-root MuiTypography-body1').find('a').text)
     texdoc.append("\documentclass{messari}\n")
     texdoc.append("\\usepackage{hyperref}\n")
     texdoc.append("\hypersetup{colorlinks=true,linkcolor=black,filecolor=magenta,urlcolor=blue,pdftitle={Overleaf Example},pdfpagemode=FullScreen}\n")
@@ -102,7 +133,7 @@ def main():
     for i in range(len(main)):
         if main[i].name in ['p','ol', 'ul']:
             texdoc.append(parse(pypandoc.convert_text(str(main[i]), 'latex', format='html')))
-        elif main[i].name == 'figure':
+        elif main[i].name in ["figure", "img"]:
             texdoc.append(parse(parse_figure(main[i], str(fignum))))
             fignum += 1
         elif main[i].name in ['h2', 'h3', 'h4', 'h5', 'h6', 'h7']:
@@ -115,12 +146,12 @@ def main():
             fout.write(texdoc[i])
 
     os.system(f"xelatex {temp}.tex")
-    os.rename(f"{temp}.pdf", f"{parse_title(title)}.pdf")
+    os.replace(f"{temp}.pdf", f"{filename}.pdf")
     driver.quit()
 
 
     cleanup(fignum, temp)
-    os.system(f"open {parse_title(title)}.pdf")
+    os.system(f"open {filename}.pdf")
 
 
 if __name__ == "__main__":
