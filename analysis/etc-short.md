@@ -1,5 +1,5 @@
 # Ethereum Classic short
-Over the past few days, ETC has jumped from $15 to $40. Is this a safe opportunity to go short? In summary, this trade is shorting ETC for a few weeks and expecting this bull fervor to wear off. 
+Over the past few days, ETC has jumped from $15 to $40. Is this a safe opportunity to go short? In summary, this trade is shorting ETC for a few weeks and expecting this bull fervor to wear off. In the meantime, the collateral will be long ETH. 
 
 ## Time horizens and expectations
 - Can be as short as a week, up to a few weeks after the Merge in September. 
