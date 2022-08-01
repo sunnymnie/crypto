@@ -1,7 +1,8 @@
 # Crypto researching
 A repository for my crypto notes
 
-## Folders
-- Analysis: focuses on individual coin analysis
-- Philosophy: focuses on big ideas and trends
-- Developer: focuses on beginner smart contract development
+## Directory:
+- analysis: Simple research on crypto protocols and networks
+- theses: Current trades/investments and my reasoning
+- philosophy: General crypto investment framework and notes from podcasts
+- archive: Historical analysis and theses

@@ -1,4 +1,2 @@
 # Analysis
-Purpose: analysis into individual coins/tokens or ecosystems
-
-Should be regularly updated as new information arrives
+Aggregate information on cool stuff being built. Should be predecessor to an investment thesis
