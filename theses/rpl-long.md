@@ -1,10 +1,13 @@
 # Rocketpool thesis
 
-Long RPL. [Twitter thread](https://twitter.com/nmorlock42/status/1551236059580735489). 'high beta ETH with downside protection and asymmetric upside'. [reddit thesis](https://www.reddit.com/r/ethfinance/comments/m3pug8/the_rocket_pool_investment_thesis/)
+Long RPL. 'high beta ETH with downside protection and asymmetric upside'.  
+- [Twitter thread](https://twitter.com/nmorlock42/status/1551236059580735489)
+- [reddit thesis](https://www.reddit.com/r/ethfinance/comments/m3pug8/the_rocket_pool_investment_thesis/)
+- [reddit v2](https://www.reddit.com/r/ethfinance/comments/qwbb8w/rocket_pool_investment_thesis_20/)
 
 ## About RPL
 - it has much more intrinsic value than just governance (collateral requirement to stake)
-- To stake [17.6](https://rocketpool.net/node-operators) ETH, user has to provide collateral between 10% and 150% of ETH in RPL
+- To stake [16](https://rocketpool.net/node-operators) ETH, user has to provide collateral between 10% and 150% of ETH in RPL
 
 
 ## Time horizens and expectations
@@ -15,13 +18,17 @@ Long RPL. [Twitter thread](https://twitter.com/nmorlock42/status/155123605958073
 - it is tied by design to the value of ETH. If ETH goes up new stakers need to [buy more RPL](https://docs.rocketpool.net/guides/node/create-validator.html#staking-rpl) to meet 10% min, and (2) existing stakers need to buy more RPL to collect RPL rewards [source](https://docs.rocketpool.net/guides/node/rewards.html#rewards-and-checkpoints)
 - Downside protection: RPL has real utility. As long as new node operators want to stake with Rocketpool, they need to buy RPL. Reasons to stake with Rocketpool: (1) decentralized, (2) <32 ETH, (3) greater staking commission by between 5% and 20% depending on when minipool set up. 
 - (short term) The Merge will create influx of stakers due to staking rate 4%->7% (need source) which will lead to new node operators
-
+- stETH vs rETH
+    - A reason to hold rETH over stETH is because less tax events: stETH value is equal ETH and you accrue rewards by recieving more stETH. So by holding stETH you're recieving stETH and will need to pay income tax. With rETH, the value grows with respect to ETH proportional to the staking rewards instead of recieving additional rETH. So your only tax event is when you sell your rETH, which means you can take advantage if traditional tax minimization strategies like simply holding for a year to qualify for long term capital gains tax treatment.
+    - Supposedly rETH would be more adopted by apps but curretly stETH is in the lead. No major lending protocals I know of uses rETH yet. But both RP and AAVE [have interest](https://snapshot.org/#/aave.eth/proposal/0xf593f2df83cc0b5bdc3920ef2c782f6b2a6f87a6603c26a5d778e3ede4d40021) in adding rETH, though no current progress. 
+    - Institutional demand for 'internet-bond' as staking ETH for rETH, shorting ETH on lending platforms will create insane liquidity for ETH/rETH pair to harvest the yield --> leading to large amounts of ETH being staked for rETH
 
 ## Bear theses
 - Rocketpool starts to become a less popular staking solution (then what?). 
     - Currently Rocket Pool is growing and growing in minipool size and RPL staked (currently 34%) [dune](https://dune.com/NDGcrypto/Rocket-Pool-rETH-and-Nodes)
 - Rocketpool gets hacked/drained
     - Solution: not go all-in, risk-management task that will always exist
+
 
 ## Supply and demand
 ### Current supply and demand
