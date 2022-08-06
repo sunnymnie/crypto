@@ -10,9 +10,11 @@ Long Ether due to the Ethereum Merge.
 
 ## Bull theses
 - 13500 new ETH / day [sassal](https://www.youtube.com/watch?v=QTXUjyYRpRQ) pre merge issuance to miners, 80% issuance reduction
+- Increased staking yield (?)
 
 ## Bear theses
-- 
+- Execution risk. However: all testnet merges were smooth, and mainnet would work out issues if they arise
+- Macro
 
 ## Supply and demand
 ### Current supply and demand
