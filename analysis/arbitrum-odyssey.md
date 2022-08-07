@@ -1,4 +1,5 @@
 # Surface-level analysis on protocols featured on Optimism Odyssey
+[bankless](https://newsletter.banklesshq.com/p/arbitrum-odyssey-begins-)
 
 ## Hop
 Bridge
