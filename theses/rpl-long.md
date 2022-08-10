@@ -5,14 +5,24 @@ Long RPL. 'high beta ETH with downside protection and asymmetric upside'.
 - [reddit thesis](https://www.reddit.com/r/ethfinance/comments/m3pug8/the_rocket_pool_investment_thesis/)
 - [reddit v2](https://www.reddit.com/r/ethfinance/comments/qwbb8w/rocket_pool_investment_thesis_20/)
 
-## About RPL
-- it has much more intrinsic value than just governance (collateral requirement to stake)
-- To stake [16](https://rocketpool.net/node-operators) ETH, user has to provide collateral between 10% and 150% of ETH in RPL
+## About RocketPool
+- Validator: ethereum address with 32 ETH doing 'staking for consensus'
+- Staking pool: 'normal' stakers deposit for rETH
+- Minipool: Validator, but with 16 ETH from staking pool. Looks identical to a validator from Ethereum's perspective. Requires 1.6 ETH worth of RPL as collateral. 
+- RocketPool Node: computer with ETH1 address + registered with RP smart contracts. Each RP node can run many minipools. 
+- Node operators: people who run RP nodes
 
+### Minor information
+- [Deposit pool](https://docs.rocketpool.net/overview/glossary.html#deposit-pool): ETH waiting to be paired with node operators, deposited by regular users. Currented capped at 2k ETH, proposal to raise to 5k
+
+### Links
+- [docs](https://docs.rocketpool.net/guides/node/responsibilities.html#how-eth2-staking-works)
 
 ## Time horizens and expectations
-- medium to long-term (1-3 years?)
-- probably a euphoric pump sometime after the merge, probably slowly growing for months to come as more stake
+- long-term (a few years)
+- possible catalysts for short-term pumps that I may swing-trade:
+    - ETH merge. Pump may be before/during/after
+    - Staked ETH withdrawal: potentially many stakers from Lido and other staking providers can move to RP, increasing demand for RPL
 
 ## Bull theses
 - it is tied by design to the value of ETH. If ETH goes up new stakers need to [buy more RPL](https://docs.rocketpool.net/guides/node/create-validator.html#staking-rpl) to meet 10% min, and (2) existing stakers need to buy more RPL to collect RPL rewards [source](https://docs.rocketpool.net/guides/node/rewards.html#rewards-and-checkpoints)
@@ -42,7 +52,7 @@ Sellers:
 
 ### Expected change in supply and demand
 Buyers (Increase):
-- Increase in ETH staking rewards following merge (?) will lead to more people who want to stake but don't meet 32 ETH requirement, or want extra commission. 
+- Increase in ETH staking rewards following merge (?) will lead to more people who want to stake but don't meet 32 ETH requirement, or want extra [15% commission](https://docs.rocketpool.net/overview/glossary.html#node-commission)
 - A lot more speculators once the Merge has completed and people flock to staking after realizing rate and RPL thesis
 
 Sellers (Decrease):
@@ -50,7 +60,7 @@ Sellers (Decrease):
 
 ## Plan and risk tolerance
 - Split up my DCA amounts to incorporate buying some RPL instead of just ETH. Reason: Currently RPL has pumped quite hard, so I am not going to go all in at the top
-- Planning to accumulate to 10-30% of my portfolio
+- Planning to accumulate up to 30% of my portfolio, hard limit at 50%. 
 - No price-stop loss, but may sell if Rocketpool is hacked, or if other decentralized staking alternatives are gaining share against Rocketpool, or growth has slowed down. 
 - No take-profit prices, but am looking for some eurphoric pumps near the Merge. Probably will start DCAing out after I have amassed a large stake 
 - Some eyeballing numbers: if holding for a few years, am expecting price to go up to ~0.1 ETH. 
