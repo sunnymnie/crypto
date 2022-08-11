@@ -4,18 +4,27 @@ Long Battlefly NFTs
 ## About Battlefly
 - [Battlefly](https://docs.battlefly.game/overview/welcome-to-battlefly) is a game (in progress) that uses MAGIC and is integrated in the Treasure ecosystem. Requires buying a Battlefly NFT in advance to play the game
 
+### About the game
+- First phase: stake 1 MAGIC per battle. When a battle is called: auto-fight, cannot decline, cannot change load-out, view 3D battle but no player-control. Main goal is to have a loadout that will win more than it loses. Winner gets loser's MAGIC. High-performing winners also get emissions from (?) team's staked MAGIC --> 7-10% ROI daily is the goal. 
+    - Current Battlefly treasury: 3.5 million MAGIC, and is using that to generate MAGIC emissions for game. 
+- Increase in Tournaments can hopefully raise to over 1000 DAU. Team is very iterative, wanting to test hypotheses. Currently Racer has two plans: (1) from elite NFT racing game that people like to watch and stream + tournaments, or (2) relaxing Metamask mobile enabled farming game for Nectar.
+- Battlefly has a shield and hull. Once shield is worn down, then hull can be destroyed. Shield is always regenerating.
+- Balance with Nectar and wins: More loses --> more Nectar --> better loadout --> more wins. Collecting nectar early with Racer helps with getting a head start with loadouts
+
 ## Time horizens and expectations
 - Selling during or just after Arbitrum Odyssey focusing on Treasure and Battlefly
+- Upon further research, game seems to have potential and may be fun. Will make sure to keep a few battleflies left to continue playing the game
 
 ## Bull theses
-- The [Arbitrum Odyssey will be featuring Treasure and Battlefly](https://newsletter.banklesshq.com/p/arbitrum-odyssey-begins-), and a lot of that attention will manifest in increased prices for MAGIC and for Battlefly NFTs
-    - Arbitrum Odyssey [does not require buying Battlefly NFTs](https://discord.com/channels/940822048106745927/953728887681081455/1004777499697365115). However, "Meanwhile having something thats more inclusive. Lets a lot more people see the project. More people could genuinely get into the project." - Kuma.   
+- The [Arbitrum Odyssey will be featuring Battlefly](https://newsletter.banklesshq.com/p/arbitrum-odyssey-begins-), and a lot of that attention will manifest in increased prices for MAGIC and for Battlefly NFTs
+    - Arbitrum Odyssey [does not require buying Battlefly NFTs](https://discord.com/channels/940822048106745927/953728887681081455/1004777499697365115). However [will allow players to rent a Battlefly to play Racer](https://twitter.com/Reformed_Normie/status/1552620858765721601?t=zJKEUDauM8gWtmzJx7L30A&s=19) and there will be cool leaderboard prizes as well (30:00). From Kuma: "Meanwhile having something thats more inclusive. Lets a lot more people see the project. More people could genuinely get into the project." From BigDawgWoof [(39:00)](https://twitter.com/Reformed_Normie/status/1552620858765721601?t=zJKEUDauM8gWtmzJx7L30A&s=19): Not trying anything too crazy for odyssey, just to get people to play (racer?) to see how fun the game is. 
+    - Our plan is to run a huge Arbitrum Odyssey event, let players collect a metric shit-tonne of Nectar, and then open up the game so that the 100k+ people who have played want to get into the game. [OfficialAbenger](https://discord.com/channels/882867268021800991/958963188903329792/1005970872785444935)
     - Assumption: Arbitrum Odyssey will still 'have steam' when this promotion goes live. Want to keep track on dune (?)
 
 ## Bear theses
 Given some of the bear theses can't be proven till later or until it's too late, I will hedge by taking profits early when they arise, and be open to start DCAing out as soon as I feel the probabilities have turned against me. 
-- Battlefly game is not finished, but devs claim to be making big progress. Also ideologically opposed to pay-to-play via NFTs. 
-- Lots of time between now and Arbitrum Odyssey resumption and event, and price can swing widly until then
+- Battlefly game is not finished, but devs claim to be making big progress. Also ideologically opposed to pay-to-play via NFTs. Counter: they are potentially adding cheap on-ramps to playing via renting NFTs? 
+- Lots of time between now and Arbitrum Odyssey resumption and event, and price can swing widly until then. However, team is working hard on promotions via tournaments.
 - Arbitrum Odyssey possibly will not include requirement to buy Battlefly NFTs (tentatively verified). If other methods they pick are weak for price appreciation, prices may plummet if everyone with the same idea of selling into Odyssey starts listing at below floor price
 - Battlefly game may not be finished before Odyssey. However, confirmed with Nick that they plan on releasing a playable version with 'most probable' probability before then
 
@@ -35,7 +44,7 @@ Buyers (Increase):
 - Sustained demand if funneling huge volume of players leads to some sticking around after the initial promotion
 
 Sellers (Decrease):
-- none
+- Potentially (depending on implementation) users may want to rent out their battleflies if that is possible
 
 Sellers (Increase):
 - Huge liquidity will lead to many selling their Battleflys, which may be enough to quell the demand
@@ -56,3 +65,4 @@ If floor price stays or goes down, I will buy whenever I have enough MAGIC. IF f
 ### During Arbitrum Treasure + Battlefly event ETA Sept 3-9
 - Want to liquidate most of my position in the first few days to make sure no second-hand NFTs are competing with my sell pressure
 - Want to be out most of my position by the end of the event
+- Consider buying back a few weeks/months after Odyssey if I am still regularly playing the game and I am in-line with the mission and team is making progress
