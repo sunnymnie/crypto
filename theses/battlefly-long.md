@@ -11,6 +11,13 @@ Long Battlefly NFTs
 - Battlefly has a shield and hull. Once shield is worn down, then hull can be destroyed. Shield is always regenerating.
 - Balance with Nectar and wins: More loses --> more Nectar --> better loadout --> more wins. Collecting nectar early with Racer helps with getting a head start with loadouts
 
+Questions:
+- Would the Racer game continue to be around for Phase 2 and 3? Would it be around for Seasons 2 and allow users to farm Nectar? 
+- I heard that the plan for the Odyssey is to allow new people to rent Battleflies so they can play the Racer game and start to accumulate nectar? Is this true? If it is, would there be a market for battlefly owners to 'rent out' their battleflies, or would the UX simply be to charge a small fee to play Racer without having an actual Battlefly? Is the team trying to get Phase 2's Gardens and Hyperdome gameplay out before the Treasure+Battlefly Odyssey week, or would that be after? (I'm expecting Treasure + Battlefly week to be ~October/November)
+- Is there any documentation regarding the 'mods', such as weapons or systems? So far the most detail I can get is through (https://play.battlefly.game/mission-control/staking/), but I could only get information from the battleflies I have. So for example, is there some resource that can tell me how much hull/HP a battlefly will have by default? Or the default shield HP & its regeneration per second? Or does that resouce not exist yet because those numbers/mods are currently just for example and can change a lot until Phase 2 is released?
+- For the Garden and Hyperdome in Phase 2, could I put my Battlefly in the Garden/Hyperdome and essentially just shut my computer off and let the collecting/battling happen automatically? Or do I have to be present and engaging with the game? (From my knowledge, Hyperdome battles will be auto-fight and the user would just watch)
+- Is there an ETA on when Racer will be available on Mobile? 
+
 ## Time horizens and expectations
 - Selling during or just after Arbitrum Odyssey focusing on Treasure and Battlefly
 - Upon further research, game seems to have potential and may be fun. Will make sure to keep a few battleflies left to continue playing the game

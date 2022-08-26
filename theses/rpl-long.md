@@ -17,6 +17,7 @@ Long RPL. 'high beta ETH with downside protection and asymmetric upside'.
 
 ### Links
 - [docs](https://docs.rocketpool.net/guides/node/responsibilities.html#how-eth2-staking-works)
+- [discord rETH liquidity brainstorming](https://discord.com/channels/405159462932971535/929890788551323678)
 
 ## Time horizens and expectations
 - long-term (a few years)
