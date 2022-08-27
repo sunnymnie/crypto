@@ -2,6 +2,8 @@
 # *messari/*
 allocation.md
 status.py
+portfolio.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

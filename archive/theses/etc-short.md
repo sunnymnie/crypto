@@ -54,3 +54,6 @@ Over the past few days, ETC has jumped from $15 to $40. Is this a safe opportuni
     - [25%] ETC balances out at this price till end of September. I may take the `L` and quit if I have other trades I am interested in taking part in. Else I will continue holding. 
     - [25%] ETC goes down. 
 - [10%] ETC may go up or down slightly but unmeaningful. If ETC is at $30-$50 range after September, I may sell if I find better trading opportunities, or if the bull theses are being played out
+
+## Result
+I closed the trade at break-even/minor loss because I was going to go on a vacation where I may not respond to massive price pumps, also this was a very low conviction trade that I intended to happen quickly. 
