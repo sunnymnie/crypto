@@ -72,3 +72,4 @@ Sellers (Decrease):
 - Ideal play: accumulate, sell most during post-Merge pump, buy back cheaper, hold for a few years and Rocketpool continues to grow
 
 ## Possible outcomes and my reactions
+Given this is a long-term trade, I will refrain from taking large short-term profits. Unless there is an euphoric pump sometime around the merge or there is a clear narrative built around LSDs, I will find opportune moments to continue accumulating RPL especially when it falls against ETH

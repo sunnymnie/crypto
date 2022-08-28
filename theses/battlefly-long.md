@@ -10,6 +10,15 @@ Long Battlefly NFTs
 - Increase in Tournaments can hopefully raise to over 1000 DAU. Team is very iterative, wanting to test hypotheses. Currently Racer has two plans: (1) from elite NFT racing game that people like to watch and stream + tournaments, or (2) relaxing Metamask mobile enabled farming game for Nectar.
 - Battlefly has a shield and hull. Once shield is worn down, then hull can be destroyed. Shield is always regenerating.
 - Balance with Nectar and wins: More loses --> more Nectar --> better loadout --> more wins. Collecting nectar early with Racer helps with getting a head start with loadouts
+- Ethics alignment: First time lead dev for Racer met a crypto games company who hired him for his game developing and community building skills and not to make a quick buck flipping NFTs. [fly ones](https://youtu.be/P4olCXV7fhA?t=1138). Main goals: game is (1) accessible (2) sustainable (3) inclusive. Accessible is a key challenge with a crypto game which will need addressing
+
+#### Battlefly Racer
+- Originally planned to be a mini-game just to indicate that the devs are working on the main game and in the meantime people can play 
+- Now figuring out how Racer fits in the main game with the help of the community
+
+#### Factions
+- Potentially some alpha for investing in this game by picking factions interested in, collecting nectar which will have lots of uses with mods, and mods will be very fun and gamey [fly ones](https://youtu.be/P4olCXV7fhA?t=1037)
+
 
 Questions:
 - Would the Racer game continue to be around for Phase 2 and 3? Would it be around for Seasons 2 and allow users to farm Nectar? 
@@ -27,13 +36,15 @@ Questions:
     - Arbitrum Odyssey [does not require buying Battlefly NFTs](https://discord.com/channels/940822048106745927/953728887681081455/1004777499697365115). However [will allow players to rent a Battlefly to play Racer](https://twitter.com/Reformed_Normie/status/1552620858765721601?t=zJKEUDauM8gWtmzJx7L30A&s=19) and there will be cool leaderboard prizes as well (30:00). From Kuma: "Meanwhile having something thats more inclusive. Lets a lot more people see the project. More people could genuinely get into the project." From BigDawgWoof [(39:00)](https://twitter.com/Reformed_Normie/status/1552620858765721601?t=zJKEUDauM8gWtmzJx7L30A&s=19): Not trying anything too crazy for odyssey, just to get people to play (racer?) to see how fun the game is. 
     - Our plan is to run a huge Arbitrum Odyssey event, let players collect a metric shit-tonne of Nectar, and then open up the game so that the 100k+ people who have played want to get into the game. [OfficialAbenger](https://discord.com/channels/882867268021800991/958963188903329792/1005970872785444935)
     - Assumption: Arbitrum Odyssey will still 'have steam' when this promotion goes live. Want to keep track on dune (?)
+- Battlefly has been prioritizing the game over the 'crypto' aspect, which is essential for any 'crypto game' to take off sustainably. Hiring Jyroblade, whom purports to have a decade experience building games professionally
 
 ## Bear theses
 Given some of the bear theses can't be proven till later or until it's too late, I will hedge by taking profits early when they arise, and be open to start DCAing out as soon as I feel the probabilities have turned against me. 
-- Battlefly game is not finished, but devs claim to be making big progress. Also ideologically opposed to pay-to-play via NFTs. Counter: they are potentially adding cheap on-ramps to playing via renting NFTs? 
+- Battlefly game is not finished, but devs claim to be making big progress (currently addressed with twice-weekly announcements/updates on game progress). Also ideologically opposed to pay-to-play via NFTs. Counter: they are potentially adding cheap on-ramps to playing via renting NFTs? & lead developers (Jyroblade) has accessibility in mind + Battlefly ethos of building an inclusive and accessible game. 
 - Lots of time between now and Arbitrum Odyssey resumption and event, and price can swing widly until then. However, team is working hard on promotions via tournaments.
 - Arbitrum Odyssey possibly will not include requirement to buy Battlefly NFTs (tentatively verified). If other methods they pick are weak for price appreciation, prices may plummet if everyone with the same idea of selling into Odyssey starts listing at below floor price
-- Battlefly game may not be finished before Odyssey. However, confirmed with Nick that they plan on releasing a playable version with 'most probable' probability before then
+- Battlefly game may not be finished before Odyssey. However, confirmed with Nick that they plan on releasing a playable version with 'most probable' probability before then. Also Racer is already out and is a decent game.
+- Battlefly team may not want BF NFTs to rise in price and may have other 'investable assets' for the purpose of investing in the game. 🟥
 
 ## Supply and demand
 ### Current supply and demand
@@ -58,18 +69,18 @@ Sellers (Increase):
 - People who are buying with the intention of selling into the pump.
 
 ## Plan and risk tolerance
-DCA Battlefly NFTs with a preference for 'uncommon' if possible. Want to maintain a balance between MAGIC:Battlefly NFTs, probably 1:3. Will plan to sell most during the lead-up to Arbitrum Odyssey and during the Odyssey week. May want to hold back on a few for my personal enjoyment, but keep no more than 3 by the end of Treasure+BattleFly week. 
+Accumulate Battlefly NFTs with a preference for 'uncommon' if possible. Want to maintain a balance between MAGIC:Battlefly NFTs, probably 1:1. Will plan to sell most during the lead-up to Arbitrum Odyssey and during the Odyssey week. May want to hold back on a few for my personal enjoyment, but keep no more than 1/3 by the end of Treasure+BattleFly week. 
 
 ## Possible outcomes and my reactions
-### Pre-Aribtrum Odyssey resuming (before Aug 30)
-If floor price stays or goes down, I will buy whenever I have enough MAGIC. IF floor price goes up, I will buy when I have excess MAGIC. Perform balancing act between NFTs and MAGIC
+### Pre-Aribtrum Odyssey resuming 
+Accumulate 'commons' when they are way below floor price via sniping noob listings and setting low collection-wide bids. Accumulate 'uncommon' when they are very close to the floor price and the floor has not gone up a lot recently. Generally just take advantage of market inefficiencies and get both common and uncommon for cheap. 
 
 ### Post Arbitrum resuming but pre Treasure+Battlefly event
 - If Battlefly NFTs floor prices keep rising, chances are it's people pricing in Arbitrum Odyssey's impact. Keep buying if I have excess MAGIC or low-steals and try doing some arbitrage by selling high the NFTs already collected
-    - May want to start selling some NFTs early to hedge the risk that Arbitrum Odyssey isn't bullish
-- If Battlefly NFTs floor prices is falling or stays the same, keep DCAing normal or slightly reserved levels
+    - May want to start selling some NFTs early to hedge the risk that Arbitrum Odyssey isn't actually bullish
+- If Battlefly NFTs floor prices is falling or stays the same, keep accumulating as normal or slightly reserved levels
 
-### During Arbitrum Treasure + Battlefly event ETA Sept 3-9
+### During Arbitrum Treasure + Battlefly event ETA Oct 11-17 (assuming GMX week starts Sept 6)
 - Want to liquidate most of my position in the first few days to make sure no second-hand NFTs are competing with my sell pressure
 - Want to be out most of my position by the end of the event
-- Consider buying back a few weeks/months after Odyssey if I am still regularly playing the game and I am in-line with the mission and team is making progress
+- Consider buying back a few weeks/months after Odyssey if I am still regularly playing the game and I am resonate with the mission and team is making progress
