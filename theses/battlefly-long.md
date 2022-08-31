@@ -24,6 +24,17 @@ Long Battlefly NFTs. Probabilistic thinking: high chance Odyssey happens & high 
 
 #### Odyssey plan / Inflation plan
 - 🔴: keep an eye out to information on how the team plans to approach the Odyssey. So far seems to be '[renting](https://discord.com/channels/940822048106745927/947301847037771816/1013574453508186224)'/[battlepass](https://discord.com/channels/940822048106745927/947301847037771816/1013626452505264159) for the near future (Odyssey), which assuming they [agree](https://discord.com/channels/940822048106745927/947301847037771816/1013626452505264159) to [my synopsis](https://discord.com/channels/940822048106745927/947301847037771816/1013624508365684760) means that they "are fine with the price rising, as in the short term there will be alternate ways to play with low capital (renting), and in the long term breeding and faction 'spawning' will maintain a sustainable supply of '2nd class/low quality' Battleflies to enter the market for cheap ways to get into the game"
+- Battlepass that can be bought with [stripe](https://discord.com/channels/882867268021800991/958963188903329792/1014023692671524924), around $5 or $10, included with starter mods and first 10 battles included. Need to come onchain to collect rewards. 
+- Battlepass gives [solebound BF](https://discord.com/channels/882867268021800991/958963188903329792/1014029625720057916) that can participate in one season, and should increase the value of regular BF NFTs due to being tradable/not disappearing
+
+#### General alpha:
+- [lessons learned by BF team](https://discord.com/channels/882867268021800991/958963188903329792/1014028891062542348):
+    - separate the defi from the gameplay
+    - invest in simplifying onboarding as much as possible
+    - build referral loops into everything we do, incentivize players to drag their friends in
+    - make the learning curve shallow so that people get hooked
+    - use matchmaking in some form to keep it interesting
+    - people care more about the rewards than their specific NFT.
 
 
 ## Time horizens and expectations
