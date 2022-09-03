@@ -36,6 +36,9 @@ Long Battlefly NFTs. Probabilistic thinking: high chance Odyssey happens & high 
     - use matchmaking in some form to keep it interesting
     - people care more about the rewards than their specific NFT.
 
+### Analytics
+- [daily active users](https://dune.com/queries/1038545/1791284)
+
 
 ## Time horizens and expectations
 - Selling during or just after Arbitrum Odyssey focusing on Treasure and Battlefly

@@ -4,6 +4,10 @@ Long MAGIC
 ## About Treasure 
 - [Treasure](https://www.treasure.lol/) is a decentralized game console connecting games with a common currency MAGIC
 
+### Analytics
+- [Marketplace and Legion](https://dune.com/treasuredao/marketplace)
+- [Treasure ecosystem](https://dune.com/fritten_eth/treasuredao-ecosystem)
+
 ## Time horizens and expectations
 - Selling during or just after Arbitrum Odyssey focusing on Treasure and Battlefly
 

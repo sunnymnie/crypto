@@ -99,6 +99,7 @@ def coingecko_price(name):
 def wallet_balance(chain, wallet, contract_address, decimal):
     query = f"{chain['api']}api?module=account&action=tokenbalance&contractaddress={contract_address}&address={wallet}&tag=latest&apikey={chain['key']}"
     res = requests.get(query).json()["result"]
+    if res == "": return 0
     return int(res)/10**decimal
 
 
