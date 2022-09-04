@@ -5,7 +5,7 @@ from enum import Enum, auto
 import math
 
 
-class bcolors:
+class colors:
     PURPLE = '\033[95m'
     BLUE = '\033[94m'
     CYAN = '\033[96m'
@@ -29,72 +29,157 @@ def get_portfolio():
         data = json.load(json_file)
     return data
 
+def print_main_portfolio(s, a, eth):
+    total = 0
+    for k in a['asset']:
+        total += a['asset'][k]
+    print_statements = []
+    print_statements.append(colors.BOLD + "MAIN" + colors.ENDC)
 
+    max_len_token = max(list(map(lambda x: len(x), {**a['asset'], **a['debt']}.keys())))
+    print_statements.append(colors.UNDERLINE + "ASSETS" + colors.ENDC)
+    for k in a['asset']:
+        if a['asset'][k] == 0: continue
+        text = f"{k}: {(max_len_token+1-len(k))*' '}{colors.GREEN}{round(a['asset'][k]/eth, 3)}Ξ{colors.ENDC}"
+        text = f"{text}{' '*(28-len(text))}{int(a['asset'][k]*100/total)}%"
+        print_statements.append(text)
+    if len(a['debt']) > 0: print_statements.append(colors.UNDERLINE + "DEBT" + colors.ENDC)
+    for k in a['debt']:
+        if a['debt'][k] == 0: continue
+        text = f"{k}: {(max_len_token-len(k))*' '}{colors.RED}-{round(a['debt'][k]/eth, 3)}Ξ{colors.ENDC}"
+        print_statements.append(text)
+        
+    for k in a['debt']:
+        total -= a['debt'][k]
+    print_statements.append(f"TOTAL: {round(total/eth, 3)}Ξ")
+    return print_statements
+
+def print_trade_portfolio(s, trade, play, eth):
+    
+    total = 0
+    for k in trade['asset']:
+        total += trade['asset'][k]
+    for k in play['asset']:
+        total += play['asset'][k]
+        
+    print_statements = []
+        
+    print_statements.append(colors.BOLD + "FUN" + colors.ENDC)
+    for k in play['asset']:
+        if play['asset'][k] == 0: continue
+        text = f"{k}: {(5-len(k))*' '}{colors.GREEN}{round(play['asset'][k]/eth, 3)}Ξ{colors.ENDC}"
+        text = f"{text}{' '*(28-len(text))}{int(play['asset'][k]*100/total)}%"
+        print_statements.append(text)
+    print_statements.append(colors.BOLD + "TRADE" + colors.ENDC)
+    for k in trade['asset']:
+        if trade['asset'][k] == 0: continue
+        text = f"{k}: {(5-len(k))*' '}{colors.GREEN}{round(trade['asset'][k]/eth, 3)}Ξ{colors.ENDC}"
+        text = f"{text}{' '*(28-len(text))}{int(trade['asset'][k]*100/total)}%"
+        print_statements.append(text)
+    print_statements.append(f"TOTAL: {round(total/eth, 3)}Ξ")
+    return print_statements
+
+def print_main_vs_trade(psm, pst):
+    left_spacing = max(list(map(lambda x: len(x), psm)))-1
+    last = f"{psm[-1]}{(left_spacing-9 - len(psm[-1]))*' '}{'  ≥  ' if (float(psm[-1][6:-1]) >= float(pst[-1][6:-1])) else '  <  '} {pst[-1]}"
+    highlight = colors.BLUE if (float(psm[-1][6:-1]) >= float(pst[-1][6:-1])) else colors.RED 
+    last = highlight + last + colors.ENDC
+    psm = psm[:-1]
+    pst = pst[:-1]
+    height = max(len(psm), len(pst))
+
+    for i in range(height):
+        text = ""
+        if i < len(psm):
+            text += psm[i] + " "*(left_spacing - len(psm[i]))
+            text += "     "
+        else:
+            text += " "*left_spacing
+        if i < len(pst):
+            text += pst[i]
+        print(text)
+    print(last)
+    
 def print_portfolio(p):
-    #  print_asset("ethereum", Asset.ETH, ethereum_bitcoin_additional)
-    #  print_asset("rocket-pool", Asset.RPL)
-    #  print_asset("magic", Asset.MAGIC)
-    #  print_battlefly()
-    print_drypowder(p)
+    s = get_portfolio()
+    trade = generate_amounts(s, s["wallets"]["trade"])
+    prices = generate_prices(s)
+    main = generate_amounts(s, s["wallets"]["main"])
+    play = generate_amounts(s, s["wallets"]["fun"])
+    calculate_position(s, trade, prices)
+    calculate_position(s, play, prices)
+    calculate_position(s, main, prices)
+    pst = print_trade_portfolio(s, trade, play, prices['ethereum'])
+    psm = print_main_portfolio(s, main, prices['ethereum'])
+    print_main_vs_trade(psm, pst)
 
-def print_drypowder(p):
-    status_header("dry-powder")
-    usdc_arb = wallet_balance(p["chains"]["arbitrum"], p["wallets"]["main"], "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8", 6)
-    usdc_poly = wallet_balance(p["chains"]["polygon"], p["wallets"]["main"], "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", 6)
-    total = usdc_arb+usdc_poly
-    print(f"Arbitrum USDC: {round(usdc_arb, 2)}")
-    print(f"Polygon USDC: {round(usdc_poly, 2)}")
-    print(bcolors.BLUE + f"Total USDC: {round(total, 2)}" + bcolors.ENDC)
+    # print_drypowder(p)
+
+# def print_drypowder(p):
+#     status_header("dry-powder")
+#     usdc_arb = wallet_balance(p["chains"]["arbitrum"], p["wallets"]["main"], "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8", 6)
+#     usdc_poly = wallet_balance(p["chains"]["polygon"], p["wallets"]["main"], "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", 6)
+#     total = usdc_arb+usdc_poly
+#     print(f"Arbitrum USDC: {round(usdc_arb, 2)}")
+#     print(f"Polygon USDC: {round(usdc_poly, 2)}")
+#     print(colors.BLUE + f"Total USDC: {round(total, 2)}" + colors.ENDC)
 
 
-def conditional_buy(asset, h24, d7):
-    buy_24h = asset[0](h24)
-    buy_7d = asset[1](d7)
-    print(f"24h change: {bcolors.GREEN if h24 > 0 else bcolors.RED}{round(h24, 2)}%{bcolors.ENDC}          buy ${buy_24h}")
-    print(f"7d  change: {bcolors.GREEN if d7 > 0 else bcolors.RED}{round(d7, 2)}%{bcolors.ENDC}          buy ${buy_7d}")
-    if buy_24h+buy_7d >= MIN_BUY:
-        print(f"{bcolors.BLUE}Total buy amount: ${buy_24h+buy_7d}{bcolors.ENDC}")
-    else:
-        print("Total buy amount: $0")
-    return buy_24h+buy_7d if buy_24h+buy_7d >= MIN_BUY else 0
+def add_token(s, token, coingecko, network, address, decimals, asset=True):
+    """
+    - s is portfolio.json
+    - token: RPL
+    - coingecko: rocket-pool
+    - network: arbitrum
+    - address: 0x...
+    - asset if asset, else debt
+    """
+    token_type = "asset" if asset else "debt"
+    token = token.lower()
+    if token not in s[token_type].keys():
+        s[token_type][token] = {}
+    s[token_type][token]["coingecko"] = coingecko
+    s[token_type][token][network] = address
+    s[token_type][token]["decimals"] = decimals
 
 def print_price(price):
-    print(f"Current price: {bcolors.PURPLE}${round(price, 2)}{bcolors.ENDC}")
+    print(f"Current price: {colors.PURPLE}${round(price, 2)}{colors.ENDC}")
 
-#  def ethereum_bitcoin_additional(eth, eth_24, eth_7d):
-#      btc, btc_24, btc_7d = coingecko_price("bitcoin")
-#      print(f"ETH/BTC 24h change: {round(eth_24-btc_24, 2)}%        7d change: {round(eth_7d-btc_7d, 2)}%")
-#      if btc_24-eth_24>0 and btc_7d-eth_7d>0:
-#          print(bcolors.BLUE + "Go long ETH and short BTC on Aave" + bcolors.ENDC)
+def calculate_position(s, a, p):
+    for t in ['asset', 'debt']:
+        for k,v in a[t].items():
+            a[t][k] = v*p[s[t][k]['coingecko']]
 
-def print_asset(name, asset, additional=None):
-    status_header(name)
-    p, p24, p7d = coingecko_price(name)
-    print_price(p)
-    #  amt = conditional_buy(asset, p24, p7d)
-    #  if additional: additional(p, p24, p7d)
-    #  return amt
+def generate_amounts(s, wallet):
+    amounts = {"asset":{"eth":0}, "debt":{}}
+    for t in ['asset', 'debt']:
+        for k in s[t].keys():
+            a = s[t][k]
+            amounts[t][k] = 0
+            for c in a.keys():
+                if c not in s["chains"].keys(): continue
+                amounts[t][k] += wallet_balance(s['chains'][c], wallet, a[c], a["decimals"])
+    for c in ["optimism", "arbitrum"]:
+        amounts["asset"]["eth"] += eth_balance(s["chains"][c], wallet)
+    return amounts
 
 
-def print_battlefly():
-    status_header("battlefly")
-    res = requests.get("https://hfihu314z3.execute-api.us-east-1.amazonaws.com/collection/arb/0x0af85a5624d24e2c6e7af3c0a0b102a28e36cea3").json()
-    floor = int(res["floorPrice"])/1000000000000000000
-    magic, magic_24h, magic_7d = coingecko_price("magic")
-    magic_position = wallet_balance(Chain.ARB, WALLET_FUN, "0x539bdE0d7Dbd336b79148AA742883198BBF60342", 18)
-    print(f"Current floor: {bcolors.PURPLE}{round(floor, 2)} MAGIC{bcolors.ENDC}     or      {bcolors.PURPLE}${round(magic*floor, 2)}{bcolors.ENDC}")
-    nft_position = floor*BATTLEFLY_NFTS
-    portfolio_position = nft_position/(nft_position+magic_position)
-    print(f"Position: {bcolors.PURPLE}{round(100*portfolio_position, 2)}%{bcolors.ENDC} BattleFly NFTs")
-    if portfolio_position > 0.9:
-        print(bcolors.YELLOW + "Portfolio is too Battlefly weighted > 90%. Buy more MAGIC"+bcolors.ENDC)
-    elif portfolio_position < 0.75:
-        print(bcolors.YELLOW + f"Portfolio needs to buy more BattleFlies (currently {BATTLEFLY_NFTS})" + bcolors.ENDC)
+def generate_prices(s):
+    """returns a dict of prices"""
+    prices = set([])
+    for k in s['asset']:
+        prices.add(s['asset'][k]['coingecko'])
+    for k in s['debt']:
+        prices.add(s['debt'][k]['coingecko'])
+    prices = dict.fromkeys(prices, 0)
+    for k in prices:
+        prices[k] = coingecko_price(k)
+    return prices
 
 
 def coingecko_price(name):
     res = requests.get(f"https://api.coingecko.com/api/v3/coins/{name}?tickers=false&community_data=false&developer_data=false").json()
-    return float(res["market_data"]["current_price"]["usd"]), float(res["market_data"]["price_change_percentage_24h"]), float(res["market_data"]["price_change_percentage_7d"])
+    return float(res["market_data"]["current_price"]["usd"])
 
 def wallet_balance(chain, wallet, contract_address, decimal):
     query = f"{chain['api']}api?module=account&action=tokenbalance&contractaddress={contract_address}&address={wallet}&tag=latest&apikey={chain['key']}"
@@ -102,12 +187,18 @@ def wallet_balance(chain, wallet, contract_address, decimal):
     if res == "": return 0
     return int(res)/10**decimal
 
+def eth_balance(chain, wallet):
+    query = f"{chain['api']}api?module=account&action=balance&address={wallet}&tag=latest&apikey={chain['key']}"
+    res = requests.get(query).json()["result"]
+    if res == "": return 0
+    return int(res)/10**18
+
 
 
 def status_header(title):
     """prints the status"""
     
-    print("="*(30-math.floor(len(title)/2)) + " " + bcolors.BOLD + title.upper() + bcolors.ENDC + " " + "="*(30-math.ceil(len(title)/2)))
+    print("="*(30-math.floor(len(title)/2)) + " " + colors.BOLD + title.upper() + colors.ENDC + " " + "="*(30-math.ceil(len(title)/2)))
 
 if __name__ == "__main__":
     main()
